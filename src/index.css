@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	background: #171719;
+	color: white;
+	font-family: 'Bebas Neue', cursive;
+}
