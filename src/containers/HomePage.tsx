@@ -1,13 +1,14 @@
 import React from 'react';
 import Planet from '../images/planetBg.png';
-import SecondText from '../images/secondText.svg';
+import 'react-circular-progressbar/dist/styles.css';
+import SvgLines from 'react-mt-svg-lines';
 
 const HomePage = () => {
 	return (
 		<>
 			<div className="container mx-auto pt-[202px] flex justify-between">
 				<div className="relative pb-[45px] inline-block">
-					<h1 className="text-[120px] leading-[120px] ">
+					<h1 className="text-[120px] leading-[120px] test2 relative">
 						Explore Your own planet
 					</h1>
 					<h2 className="text-[120px] leading-[119px]   ">
@@ -18,15 +19,30 @@ const HomePage = () => {
 						metaverse
 					</h2>
 					{/* <img
-					className="absolute top-[-59px] left-[660px] bg-transparent z-20"
-					src={SecondText}
-					alt="#"
-				/> */}
+						className="absolute top-[-59px] left-[660px] bg-transparent z-20"
+						src={FirstText}
+						alt="#"
+					/>
 					<img
-						className="bg-transparent absolute top-[-50px] left-[664px]  "
+						className="absolute top-[-59px] left-[660px] bg-transparent z-20"
+						src={SecondText}
+						alt="#"
+					/> */}
+					<img
+						className="bg-transparent absolute top-[-50px] left-[664px] blended"
 						src={Planet}
 						alt="#"
 					/>
+					<SvgLines animate={500} duration={10000} playback={'infinite'}>
+						<svg className="lineSvg" viewBox="0 0 100 100">
+							<path
+								d=" M 50 30 A 20 20 0 1 1 50 70 A 20 20 0 1 1 50 30 Z"
+								stroke="#E75626"
+								strokeWidth="0.1"
+								fill="none"
+							/>
+						</svg>
+					</SvgLines>
 				</div>
 				<div className="inline-block ">
 					<div className="flex flex-col justify-center items-center">

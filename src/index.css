@@ -13,3 +13,16 @@
 .myTextStroke {
 	-webkit-text-stroke: 1px #ffffff;
 }
+
+.blended {
+	mix-blend-mode: exclusion;
+}
+
+.lineSvg {
+	background: transparent;
+	position: absolute;
+	top: -683px;
+	right: -614px;
+	z-index: 2;
+	mix-blend-mode: lighten;
+}

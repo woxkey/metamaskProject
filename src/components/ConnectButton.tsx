@@ -11,7 +11,7 @@ const ConnectButton = () => {
 	return account ? (
 		<div>{account}</div>
 	) : (
-		<div className="px-6 py-[10px] bg-[#E75626] rounded-[20px]">
+		<div className="px-6 py-[10px] bg-[#E75626] rounded-[20px] z-50">
 			<button className="" onClick={handleConnectWallet}>
 				Connect Metamask
 			</button>
