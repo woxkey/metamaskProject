@@ -21,8 +21,7 @@
 .lineSvg {
 	background: transparent;
 	position: absolute;
-	top: -683px;
-	right: -614px;
-	z-index: 2;
+	top: -501px;
+	right: -422px;
 	mix-blend-mode: lighten;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEthers} from '@usedapp/core';
 
-const ConnectButton = () => {
+const ConnectButton: React.FunctionComponent = (): React.ReactElement => {
 	const {activateBrowserWallet, account} = useEthers();
 
 	const handleConnectWallet = () => {
@@ -9,12 +9,12 @@ const ConnectButton = () => {
 	};
 
 	return account ? (
-		<div>{account}</div>
+		<div className="text-[#E75626] w-[145px] text-ellipsis overflow-hidden whitespace-nowrap">
+			{account}
+		</div>
 	) : (
 		<div className="px-6 py-[10px] bg-[#E75626] rounded-[20px] z-50">
-			<button className="" onClick={handleConnectWallet}>
-				Connect Metamask
-			</button>
+			<button onClick={handleConnectWallet}>Connect Metamask</button>
 		</div>
 	);
 };
