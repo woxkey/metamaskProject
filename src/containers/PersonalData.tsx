@@ -3,6 +3,11 @@ import {useParams} from 'react-router-dom';
 import {getUser} from '../features/UserSlice';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
 import halfImage from '../images/halfimage.svg';
+import firstLayer from '../images/firstLayer.svg';
+import blackMatter from '../images/blackMatter.svg';
+import thirdLayer from '../images/thirdLayer.svg';
+import fourthLayer from '../images/fourthLayer.svg';
+import fifthLayer from '../images/fifthLayer.svg';
 
 const PersonalData: React.FunctionComponent = (): React.ReactElement => {
 	const dispatch = useAppDispatch();
@@ -30,9 +35,29 @@ const PersonalData: React.FunctionComponent = (): React.ReactElement => {
 				</p>
 			</div>
 			<img
-				className="w-[500px] h-[500px] abolute top-[1000px]  left-0 float-right"
+				className="w-[320px] h-[320px] fixed top-[45%] translate-y-[-50%] z-10 bg-transparent right-0"
 				src={halfImage}
+				alt="halfPlanet"
+			/>
+			<img
+				src={firstLayer}
+				className="w-[532px] h-[532px] fixed top-[45%] translate-y-[-50%]  right-0"
 				alt=""
+			/>
+			<img
+				src={blackMatter}
+				className="w-[526px] h-[526px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				alt="blackMatter"
+			/>
+			<img
+				src={fourthLayer}
+				className="w-[384px] h-[384px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				alt="thirdLayer"
+			/>
+			<img
+				className="w-[370px] h-[370px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				src={fifthLayer}
+				alt="fourthLayer"
 			/>
 		</>
 	);
