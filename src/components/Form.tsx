@@ -76,7 +76,9 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 			<button
 				disabled={account.account ? false : true}
 				type="submit"
-				className="uppercase text-[18px] leading-[22px] w-[148px] bg-[#E75626] px-[24px] py-[10px]  rounded-[30px] mt-[24px]"
+				className={
+					'uppercase text-[18px] leading-[22px] w-[148px] bg-[#E75626] px-[24px] py-[10px]  rounded-[30px] mt-[24px]'
+				}
 			>
 				Get early access
 			</button>
