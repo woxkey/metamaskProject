@@ -18,16 +18,7 @@ const Explore: React.FunctionComponent = (): React.ReactElement => {
 						</span>{' '}
 						metaverse
 					</h2>
-					{/* <img
-						className="absolute top-[-59px] left-[660px] bg-transparent z-20"
-						src={FirstText}
-						alt="#"
-					/>
-					<img
-						className="absolute top-[-59px] left-[660px] bg-transparent z-20"
-						src={SecondText}
-						alt="#"
-					/> */}
+
 					<img
 						className="bg-transparent absolute top-[-50px] left-[664px] blended"
 						src={Planet}

@@ -13,9 +13,12 @@ const ConnectButton: React.FunctionComponent = (): React.ReactElement => {
 			{account}
 		</div>
 	) : (
-		<div className="px-6 py-[10px] bg-[#E75626] rounded-[20px] z-50">
-			<button onClick={handleConnectWallet}>Connect Metamask</button>
-		</div>
+		<button
+			className="px-6 py-[10px] bg-[#E75626] rounded-[20px] z-50"
+			onClick={handleConnectWallet}
+		>
+			Connect Metamask
+		</button>
 	);
 };
 

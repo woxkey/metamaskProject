@@ -16,6 +16,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 	} as IUser);
 	const account = useEthers();
 	const dispatch = useAppDispatch();
+	const {users, currentUser} = useAppSelector((state) => state.user);
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setUser({...user, [e.target.name]: e.target.value});
@@ -26,7 +27,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 		await dispatch(getUsers());
 
 		const newUser: IUserDto = {
-			id: parseInt(nanoid()),
+			id: currentUser.id ? currentUser.id : parseInt(nanoid()),
 			username: user.username,
 			email: user.email,
 			address: user.address,
@@ -40,10 +41,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 	}, [account.account]);
 
 	return (
-		<form
-			onSubmit={handleSubmit}
-			className="container mx-auto pt-[108px] pb-[339px] flex flex-col"
-		>
+		<form onSubmit={handleSubmit} className="flex flex-col">
 			<h2 className="text-[#E75626] text-[36px] leading-[43px]">
 				Beta test registration
 			</h2>

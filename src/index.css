@@ -8,6 +8,7 @@
 	background: #171719;
 	color: white;
 	font-family: 'Bebas Neue', cursive;
+	box-sizing: border-box;
 }
 
 .myTextStroke {
@@ -24,4 +25,17 @@
 	top: -501px;
 	right: -422px;
 	mix-blend-mode: lighten;
+}
+
+.tbody::-webkit-scrollbar {
+	width: 3px;
+	padding-left: 28px;
+}
+
+.tbody::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.tbody::-webkit-scrollbar-thumb {
+	background: #e75626;
 }
