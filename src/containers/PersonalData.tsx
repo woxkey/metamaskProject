@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import {getUser} from '../features/UserSlice';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
-import halfImage from '../images/halfimage.svg';
+import halfImage from '../images/halfImage.svg';
 import firstLayer from '../images/firstLayer.svg';
 import blackMatter from '../images/blackMatter.svg';
 import thirdLayer from '../images/thirdLayer.svg';
