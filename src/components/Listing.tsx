@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import {deleteUser} from '../features/UserSlice';
+import {deleteUser, setShowUser} from '../features/UserSlice';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
 
 const Listing: React.FunctionComponent = (): React.ReactElement => {
@@ -10,6 +10,7 @@ const Listing: React.FunctionComponent = (): React.ReactElement => {
 
 	const handleDelete = (id: number) => {
 		dispatch(deleteUser(id));
+		dispatch(setShowUser());
 	};
 
 	const handleUserPage = (id: number) => {

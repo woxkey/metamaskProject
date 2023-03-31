@@ -8,6 +8,7 @@ interface UserState {
 	loading: boolean;
 	currentUser: IUserDto;
 	user: IUserDto;
+	showUser: boolean;
 }
 
 const initialState: UserState = {
@@ -15,6 +16,7 @@ const initialState: UserState = {
 	loading: false,
 	currentUser: {} as IUserDto,
 	user: {} as IUserDto,
+	showUser: false,
 };
 
 export const getUsers = createAsyncThunk('getUsers', async () => {
@@ -50,6 +52,9 @@ export const userSlice = createSlice({
 		deleteUser: (state, {payload}: PayloadAction<number>) => {
 			state.users = state.users.filter((user) => user.id !== payload);
 		},
+		setShowUser: (state) => {
+			state.showUser = !state.showUser;
+		},
 	},
 	extraReducers: (builder) => {
 		builder
@@ -82,6 +87,6 @@ export const userSlice = createSlice({
 	},
 });
 
-export const {addUser, deleteUser} = userSlice.actions;
+export const {addUser, deleteUser, setShowUser} = userSlice.actions;
 
 export default userSlice.reducer;

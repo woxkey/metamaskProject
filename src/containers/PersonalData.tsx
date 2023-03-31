@@ -5,7 +5,6 @@ import {useAppDispatch, useAppSelector} from '../store/hooks';
 import halfImage from '../images/halfImage.svg';
 import firstLayer from '../images/firstLayer.svg';
 import blackMatter from '../images/blackMatter.svg';
-import thirdLayer from '../images/thirdLayer.svg';
 import fourthLayer from '../images/fourthLayer.svg';
 import fifthLayer from '../images/fifthLayer.svg';
 

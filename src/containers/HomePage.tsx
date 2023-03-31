@@ -4,13 +4,16 @@ import Explore from '../components/Explore';
 import Form from '../components/Form';
 import Listing from '../components/Listing';
 import Modal from '../components/Modal';
+import {useEthers} from '@usedapp/core';
 
 const HomePage: React.FunctionComponent = (): React.ReactElement => {
 	const [extension, setExtension] = useState<boolean | null>(null);
+	const {activateBrowserWallet, account} = useEthers();
 
 	useEffect(() => {
 		if (window.ethereum) {
 			setExtension(true);
+			activateBrowserWallet();
 		} else {
 			setExtension(false);
 		}

@@ -1,6 +1,6 @@
 import {useEthers} from '@usedapp/core';
 import React, {useState, useEffect} from 'react';
-import {addUser, getUsers} from '../features/UserSlice';
+import {addUser, getUsers, setShowUser} from '../features/UserSlice';
 import IUser from '../interfaces/IUser';
 import IUserDto from '../interfaces/IUserDto';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
@@ -16,7 +16,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 	} as IUser);
 	const account = useEthers();
 	const dispatch = useAppDispatch();
-	const {users, currentUser} = useAppSelector((state) => state.user);
+	const {currentUser, showUser} = useAppSelector((state) => state.user);
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setUser({...user, [e.target.name]: e.target.value});
@@ -34,6 +34,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 		};
 
 		dispatch(addUser(newUser));
+		dispatch(setShowUser());
 	};
 
 	useEffect(() => {
@@ -52,33 +53,45 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 				commodo consequat.
 			</p>
 			<h3 className="text-[24px] leading-[29px] caret-transparent">Name</h3>
-			<input
-				onChange={handleInputChange}
-				className="border-[#FFFFFF] pl-[18px] pr-[116px] text-[14px] leading-[18px] border py-[12px] rounded-[30px] mt-[8px] w-[421px]"
-				type="text"
-				placeholder="We will display your name in participation list "
-				name="username"
-				required
-				value={user.username}
-			/>
+			{!showUser ? (
+				<input
+					onChange={handleInputChange}
+					className="border-[#FFFFFF] pl-[18px] pr-[116px] text-[14px] leading-[18px] border py-[12px] rounded-[30px] mt-[8px] w-[421px]"
+					type="text"
+					placeholder="We will display your name in participation list "
+					name="username"
+					required
+					value={user.username}
+				/>
+			) : (
+				<h2 className="text-[32px] leading-[38px] text-[#E75626] pt-2">
+					{user.username}
+				</h2>
+			)}
 			<h3 className="text-[24px] leading-[29px] mt-[18px] caret-transparent">
 				Email
 			</h3>
-			<input
-				onChange={handleInputChange}
-				className="border-[#FFFFFF] pl-[18px] pr-[116px] text-[14px] leading-[18px] border py-[12px] rounded-[30px] mt-[8px] w-[421px] "
-				type="email"
-				placeholder="We will display your email in participation list "
-				name="email"
-				required
-				value={user.email}
-			/>
+			{!showUser ? (
+				<input
+					onChange={handleInputChange}
+					className="border-[#FFFFFF] pl-[18px] pr-[116px] text-[14px] leading-[18px] border py-[12px] rounded-[30px] mt-[8px] w-[421px] "
+					type="email"
+					placeholder="We will display your email in participation list "
+					name="email"
+					required
+					value={user.email}
+				/>
+			) : (
+				<h2 className="text-[32px] leading-[38px] text-[#E75626] pt-2">
+					{user.email}
+				</h2>
+			)}
 			<button
-				disabled={account.account ? false : true}
+				disabled={account.account && !showUser ? false : true}
 				type="submit"
-				className={
-					'uppercase text-[18px] leading-[22px] w-[148px] bg-[#E75626] px-[24px] py-[10px]  rounded-[30px] mt-[24px]'
-				}
+				className={`${
+					showUser && 'opacity-[50%]'
+				} uppercase text-[18px] leading-[22px] w-[148px] bg-[#E75626] px-[24px] py-[10px]  rounded-[30px] mt-[24px]`}
 			>
 				Get early access
 			</button>
