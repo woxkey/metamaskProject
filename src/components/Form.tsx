@@ -65,7 +65,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 				/>
 			) : (
 				<h2 className="text-[32px] leading-[38px] text-[#E75626] pt-2">
-					{user.username}
+					{currentUser.username}
 				</h2>
 			)}
 			<h3 className="text-[24px] leading-[29px] mt-[18px] caret-transparent">
@@ -83,7 +83,7 @@ const Form: React.FunctionComponent = (): React.ReactElement => {
 				/>
 			) : (
 				<h2 className="text-[32px] leading-[38px] text-[#E75626] pt-2">
-					{user.email}
+					{currentUser.email}
 				</h2>
 			)}
 			<button
