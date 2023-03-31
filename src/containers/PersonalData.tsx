@@ -2,11 +2,11 @@ import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import {getUser} from '../features/UserSlice';
 import {useAppDispatch, useAppSelector} from '../store/hooks';
-import halfImage from '../images/halfImage.svg';
 import firstLayer from '../images/firstLayer.svg';
 import blackMatter from '../images/blackMatter.svg';
 import fourthLayer from '../images/fourthLayer.svg';
 import fifthLayer from '../images/fifthLayer.svg';
+import planetBg from '../images/planet.png';
 
 const PersonalData: React.FunctionComponent = (): React.ReactElement => {
 	const dispatch = useAppDispatch();
@@ -34,27 +34,27 @@ const PersonalData: React.FunctionComponent = (): React.ReactElement => {
 				</p>
 			</div>
 			<img
-				className="w-[320px] h-[320px] fixed top-[45%] translate-y-[-50%] z-10 bg-transparent right-0"
-				src={halfImage}
+				className="w-[320px] h-[320px] fixed top-[45%] translate-y-[-50%] z-10 bg-transparent right-[-100px]"
+				src={planetBg}
 				alt="halfPlanet"
 			/>
 			<img
 				src={firstLayer}
-				className="w-[532px] h-[532px] fixed top-[45%] translate-y-[-50%]  right-0"
+				className="w-[532px] h-[532px] fixed top-[45%] translate-y-[-50%]  right-[-50px]"
 				alt=""
 			/>
 			<img
 				src={blackMatter}
-				className="w-[526px] h-[526px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				className="w-[526px] h-[526px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-[-50px]"
 				alt="blackMatter"
 			/>
 			<img
 				src={fourthLayer}
-				className="w-[384px] h-[384px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				className="w-[384px] h-[384px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-[-50px]"
 				alt="thirdLayer"
 			/>
 			<img
-				className="w-[370px] h-[370px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-0"
+				className="w-[370px] h-[370px] fixed top-[45%] translate-y-[-50%] bg-transparent  right-[-50px]"
 				src={fifthLayer}
 				alt="fourthLayer"
 			/>
