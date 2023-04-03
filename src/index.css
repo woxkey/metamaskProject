@@ -9,6 +9,7 @@
 	color: white;
 	font-family: 'Bebas Neue', cursive;
 	box-sizing: border-box;
+	z-index: 1;
 }
 
 .myTextStroke {
@@ -39,4 +40,8 @@
 .myContainer {
 	max-width: 1280px;
 	margin: 0 auto;
+}
+
+.blackMatter {
+	z-index: 1;
 }
