@@ -15,10 +15,6 @@
 	-webkit-text-stroke: 1px #ffffff;
 }
 
-.blended {
-	mix-blend-mode: exclusion;
-}
-
 .lineSvg {
 	background: transparent;
 	position: absolute;
@@ -38,4 +34,9 @@
 
 .tbody::-webkit-scrollbar-thumb {
 	background: #e75626;
+}
+
+.myContainer {
+	max-width: 1280px;
+	margin: 0 auto;
 }

@@ -7,20 +7,20 @@ const Explore: React.FunctionComponent = (): React.ReactElement => {
 	return (
 		<>
 			<div className="container mx-auto pt-[202px] flex justify-between">
-				<div className="relative pb-[45px] inline-block">
-					<h1 className="text-[120px] leading-[120px] test2 relative">
+				<div className="relative pb-[45px] inline-block ">
+					<h1 className="text-[120px] leading-[120px] bg-transparent  relative  z-10">
 						Explore Your own planet
 					</h1>
-					<h2 className="text-[120px] leading-[119px]   ">
+					<h2 className="text-[120px] leading-[119px] bg-opacity-0 z-10">
 						In{' '}
-						<span className="text-[#171719]  myTextStroke bg-transparent">
+						<span className="text-[#171719]  myTextStroke bg-transparent  z-10">
 							our New
 						</span>{' '}
 						metaverse
 					</h2>
 
 					<img
-						className="bg-transparent absolute top-[-50px] left-[664px] blended"
+						className=" absolute top-[-50px] left-[664px] bg-transparent mix-blend-exclusion z-20"
 						src={Planet}
 						alt="#"
 					/>
@@ -37,6 +37,7 @@ const Explore: React.FunctionComponent = (): React.ReactElement => {
 						</div>
 					</SvgLines>
 				</div>
+
 				<div className="inline-block ">
 					<div className="flex flex-col justify-center items-center">
 						<h3 className="text-[32px] leading-[38px] pb-[42px]">
