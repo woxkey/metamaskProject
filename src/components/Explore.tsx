@@ -2,6 +2,8 @@ import React from 'react';
 import Planet from '../images/planetBg.png';
 import 'react-circular-progressbar/dist/styles.css';
 import SvgLines from 'react-mt-svg-lines';
+import button from '../images/button.svg';
+import smallBtn from '../images/smallDot.svg';
 
 const Explore: React.FunctionComponent = (): React.ReactElement => {
 	return (
@@ -36,6 +38,20 @@ const Explore: React.FunctionComponent = (): React.ReactElement => {
 							</svg>
 						</div>
 					</SvgLines>
+					<div className="  flex justify-center items-center absolute top-[-154px] right-[156px] py-[6px] px-3 bg-white rounded-[15px]">
+						<span className="bg-transparent text-[#171719] ">Q1 2022</span>
+						<img className="bg-transparent h-6" src={button} alt="#" />
+					</div>
+					<img
+						className="absolute top-[100px] right-[-62px]"
+						src={smallBtn}
+						alt="#"
+					/>
+					<img
+						className="absolute top-[343px] right-[170px]"
+						src={smallBtn}
+						alt="#"
+					/>
 				</div>
 
 				<div className="inline-block ">
