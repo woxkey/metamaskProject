@@ -52,7 +52,7 @@ const Explore: React.FunctionComponent = (): React.ReactElement => {
 						alt="#"
 					/>
 					<img
-						className="absolute top-[343px] right-[170px] z-20"
+						className="absolute top-[343px] right-[174px] z-20"
 						src={smallBtn}
 						alt="#"
 					/>
